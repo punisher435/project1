@@ -6,6 +6,8 @@
  * @flow strict-local
  */
 
+ import 'react-native-gesture-handler';
+
 import React from 'react';
 import type {Node} from 'react';
 import {
@@ -27,6 +29,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Welcome from './screens/Welcome';
+import RedirectHome from './RedirectHome';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -64,7 +67,7 @@ const App: () => Node = () => {
   return (
    
       <View style={styles.container}>
-      <Welcome />
+      <RedirectHome isAuthenticated={false} />
       </View>
      
     

@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 
 import Colors from '../config/colors';
+import styles from './Button.style';
 
 export default function Button({ title, onPress, buttonstyle,textstyle }) {
   return (
@@ -15,21 +16,5 @@ export default function Button({ title, onPress, buttonstyle,textstyle }) {
   )
 }
 
-const styles = StyleSheet.create({
-  button: {
-    
 
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 15,
-    width: "100%",
-    
-  },
-  text: {
-    
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
-
-
-  },
-})
 

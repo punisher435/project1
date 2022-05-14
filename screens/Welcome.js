@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View,ImageBackground,Image,PixelRatio } from 'react-native'
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 
 import { Constants } from '../config/constants';
 import Button from '../components/Button';
 import Colors from '../config/colors';
+
+import styles from './Welcome.style';
 
 
 
@@ -15,6 +18,7 @@ const y=Constants.y;
 const z=y/x;
 
 export default function Welcome() {
+    const navigation = useNavigation();
     console.log(x);
   return (
     <View style={styles.container}>
@@ -39,7 +43,7 @@ export default function Welcome() {
             <Text style={styles.header}>Welcome!</Text>
             <Text style={styles.description}>Train and live the new experience of Yoga and Kung Fu at home</Text>
         
-        <Button title="Get Started" onPress={() => {}} buttonstyle={
+        <Button title="Get Started" onPress={() => {navigation.navigate("Login")}} buttonstyle={
             {
                 position: 'absolute',
                 width: 329*z,
@@ -79,71 +83,3 @@ export default function Welcome() {
   )
 }
 
-const styles = StyleSheet.create({
-    container:{
-        flex:1,
-    },
-    bgimage:{
-        flex: 1,
-        justifyContent: "center",
-        zIndex:0,
-        position:'absolute',
-        width:'100%',
-        height:'100%',
-        
-       
-    },
-    gradientimage:{
-        flex:1,
-        
-        width:'100%',
-        height:'100%',
-        position:'absolute',
-        
-    },
-    image:{
-        position: 'absolute',
-        width: 430*z ,
-        height: 299*z,
-        left: 22*z,
-        top: 18*z,
-    },
-    header:{
-        position: 'absolute',
-    width: 213*z,
-    height: 56*z,
-    left: 53*z,
-    top: 610*z,
-
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    fontWeight: '700',
-    fontSize: 48*z,
-    lineHeight: 56*z,
-
-    color: '#FFFFFF',
-
-    },
-    description:{
-        position: 'absolute',
-        width: 289*z,
-        height: 42*z,
-        left: 53*z,
-        top: 678*z,
-
-        fontFamily: 'Roboto',
-        fontStyle: 'normal',
-        fontWeight: '500',
-        fontSize: 18*z,
-        lineHeight: 21*z,
-
-        color: '#FFFFFF',
-    },
-
-    linearGradient:{
-        flex:1,
-        zIndex:1,
-      
-    },
-
-})
