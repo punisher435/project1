@@ -92,7 +92,7 @@ function Login(props) {
           validationSchema={validationSchema}
         >
 
-
+          <View style={styles.formfield}>
           <FormField
             autoCapitalize="none"
             autoCorrect={false}
@@ -102,7 +102,9 @@ function Login(props) {
             holder="Email"
 
           />
+          </View>
 
+          <View style={styles.formfield}>
           <FormField
             autoCapitalize="none"
             autoCorrect={false}
@@ -112,6 +114,7 @@ function Login(props) {
             holder="Password"
 
           />
+          </View>
 
           <View style={styles.logincon}>
 
@@ -133,6 +136,25 @@ function Login(props) {
             <Text style={styles.statement}>Other sign in options</Text>
 
 
+          </View>
+
+          <View style={styles.iconcon}>
+            <View style={styles.icon}>
+              <ImageBackground  style={styles.ellipse1} source={require('../config/assets/Ellipse_1.png')}>
+              <Image  style={styles.socialicon} source={require('../config/assets/ant-design_apple-filled.png')}></Image>
+              </ImageBackground>
+              
+            </View>
+            <View style={styles.icon}>
+            <ImageBackground  style={styles.ellipse1} source={require('../config/assets/Ellipse_2.png')}>
+              <Image  style={styles.socialicon} source={require('../config/assets/akar-icons_google-fill.png')}></Image>
+              </ImageBackground>
+            </View>
+            <View style={styles.icon}>
+            <ImageBackground  style={styles.ellipse1} source={require('../config/assets/Ellipse_3.png')}>
+              <Image  style={styles.socialicon} source={require('../config/assets/brandico_facebook.png')}></Image>
+              </ImageBackground>
+            </View>
           </View>
 
           

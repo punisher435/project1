@@ -21,6 +21,7 @@ export default StyleSheet.create({
         width: '100%',
         height: 50,
         paddingLeft: 10,
+        fontSize:18*z,
     
         color: Colors.white,
       },
@@ -34,7 +35,7 @@ export default StyleSheet.create({
       placeholdertext:{
         color:Colors.white,
         position:'absolute',
-        top:0,
+        top:-6,
         left:0,
       }
 

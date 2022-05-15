@@ -18,24 +18,30 @@ export default StyleSheet.create({
     fontWeight: '700',
     fontSize: 48*z,
     lineHeight: 56*z,
-        marginBottom: 10*z,
-        marginTop: 20*z,
+      marginTop:200*z,
+      marginBottom:10*z,
         color:Colors.white,
       },
       description: {
         textAlign: 'center',
         fontSize: 22,
         color: Colors.grey,
-        marginBottom: 20,
+        marginBottom: 20*z,
     
-        marginTop: 10,
+        marginTop: 10*z,
+      },
+      formfield:{
+        marginBottom: 20*z,
+    
+        marginTop: 20*z,
       },
       buttoncontainer: {
-        marginTop: 15,
+        marginTop: 15*z,
+        marginBottom: 30*z,
+        justifyContent:'center',
+        flexDirection:'row'
       },
-      buttoncontainer: {
-    
-      },
+      
       textcon: {
         fontSize: 15,
         color: '#B0B0B0',
@@ -68,6 +74,9 @@ export default StyleSheet.create({
       logincon: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
+        marginBottom: 20*z,
+    
+        marginTop: 10*z,
       },
       signupcon: {
         flexDirection: 'row',
@@ -77,12 +86,31 @@ export default StyleSheet.create({
         flexDirection: 'row',
       },
       iconcon: {
+        marginBottom:20*z,
+        marginTop:10*z,
         flexDirection: 'row',
         justifyContent: 'center',
       },
       icon: {
-        marginLeft: 2,
-        marginRight: 2,
+        marginLeft: 18*z,
+        marginRight: 18*z,
+        width:40*z,
+        height:40*z,
+        justifyContent:'center',
+        flexDirection:'row',
+        
+        borderRadius:50,
+      },
+      ellipse1:{
+      width:'100%',
+      height:'100%',
+      justifyContent:'center',
+      flexDirection:'row',
+      alignItems:'center',
+      },
+      socialicon:{
+  
+  
       },
     
       bgimage:{
@@ -95,6 +123,7 @@ export default StyleSheet.create({
         
        
     },
+    
     gradientimage:{
         flex:1,
         
