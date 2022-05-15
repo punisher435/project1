@@ -7,6 +7,6 @@ const z=Constants.z;
 
 
 export default StyleSheet.create({
-    error: { color: "red" },
+    error: { color: "red" ,paddingTop:10*z,fontSize:18*z,},
 
 })

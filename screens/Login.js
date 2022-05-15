@@ -21,20 +21,12 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 const validationSchema = Yup.object().shape({
 
 
-  username: Yup.string().required().label("Username"),
-  password: Yup.string().required().label("password"),
+  Email: Yup.string().required().label("Email"),
+  Password: Yup.string().required().label("Password"),
 });
 
 
-const obj1 = {
-  bgcolor: 'dark',
-  color: 'white',
-  x1: 10,
-  x2: 10,
-  x3: 10,
-  x4: 10,
-  width: '100%',
-}
+
 
 function Login(props) {
   const navigation = useNavigation();
@@ -46,14 +38,14 @@ function Login(props) {
   }
 
   const submitform = ({
-    username,
-    password,
+    Email,
+    Password,
   }) => {
     
    
 
-    console.log(username);
-    console.log(password);
+    console.log(Email);
+    console.log(Password);
 
   }
 
@@ -85,8 +77,8 @@ function Login(props) {
 
         <Form
           initialValues={{
-            username: "",
-            password: "",
+            Email: "",
+            Password: "",
           }}
           onSubmit={submitform}
           validationSchema={validationSchema}
@@ -98,7 +90,7 @@ function Login(props) {
             autoCorrect={false}
 
 
-            name="username"
+            name="Email"
             holder="Email"
 
           />
@@ -110,7 +102,7 @@ function Login(props) {
             autoCorrect={false}
             secureTextEntry={true}
 
-            name="password"
+            name="Password"
             holder="Password"
 
           />
